@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="heading">
+            <img class="logo1" src="./images/icons8-slack-50.png" alt="logo">
+            <p class="name">Jahanvi</p>
+        </div>
+        <div class="right">
+            <div class="home">
+                <button class="active" name="button" onmouseover="changeHoverIcon(this)" onmouseout="resetHoverIcon(this)" onclick="scrollToSection('home'); setActiveButton(this);">
+                    <span>Home</span>
+                    <div class="icon-container">
+                        <img id="home-fimage" class="inactive-icon" src="./images/home.png" alt=""> 
+                        <img id="home-limage" class="active-icon" src="./images/home (1).png" alt="">
+                    </div>
+                </button>
+                <button onmouseover="changeHoverIcon(this)" onmouseout="resetHoverIcon(this)" onclick="scrollToSection('about'); setActiveButton(this);">
+                    <span>About</span>
+                    <div class="icon-container">
+                        <img id="about-fimage" class="inactive-icon" src="./images/user (3).png" alt=""> 
+                        <img id="about-limage" class="active-icon" src="./images/user (2).png" alt="">
+                    </div>
+                </button>
+                <button onmouseover="changeHoverIcon(this)" onmouseout="resetHoverIcon(this)" onclick="scrollToSection('skills'); setActiveButton(this);">
+                    <span>Skills</span>
+                    <div class="icon-container"> 
+                        <img id="skills-fimage" class="inactive-icon" src="./images/ranking-podium-empty.png" alt=""> 
+                        <img id="skills-limage" class="active-icon" src="./images/ranking-podium-empty (1).png" alt="">
+                    </div>
+                </button>
+                <button onmouseover="changeHoverIcon(this)" onmouseout="resetHoverIcon(this)" onclick="scrollToSection('services'); setActiveButton(this);">
+                    <span>Services</span>
+                    <div class="icon-container"> 
+                        <img id="services-fimage" class="inactive-icon" src="./images/location-arrow.png" alt=""> 
+                        <img id="services-limage" class="active-icon" src="./images/location-arrow (1).png" alt="">
+                    </div>
+                </button>
+                <button onmouseover="changeHoverIcon(this)" onmouseout="resetHoverIcon(this)" onclick="scrollToSection('projects'); setActiveButton(this);">
+                    <span>Projects</span>
+                    <div class="icon-container"> 
+                        <img id="projects-fimage" class="inactive-icon" src="./images/icons8-globe-50.png" alt="">  
+                        <img id="projects-limage" class="active-icon" src="./images/icons8-globe-50 (1).png" alt="">
+                    </div>
+                </button>
+            </div>
+            <button class="false" onclick="scrollToSection('newsletter'); setActiveButton(this)">Contact-Me</button>
+            <button id="moon-button" class="imagebutton false" onmouseover="changeHover(this)" onmouseout="resetHover(this)" onclick="scrollToSection('education'); changeImage()">
+                <img src="./images/graduation-cap (1).png" alt="theme changer" id="moon-image" style="vertical-align: top;">
+                <img src="./images/graduation-cap.png" alt="moon" id="hover-moon" style="display: none; vertical-align: top;">
+            </button>
+            
+            
+        </div>
+    </nav>
+
+    <aside>
+       <a href="https://www.linkedin.com/in/jahanvi025/" target="_blank"> <div> <img src="./images/linkedin (2).png" alt="linkedin"></div></a>
+       <a href="https://www.instagram.com/jahanvi6023?igsh=MXA2dGw5dmQ4NDd2" target="_blank"><div> <img src="./images/instagram (2).png" alt="Instagram"></div></a>
+       <a href="https://github.com/Jahanvi025" target="_blank"> <div><img src="./images/github (3).png" alt="github"></div></a>
+        
+    </aside>
+    <div class="container1" id="home">
+        <div class="text">
+            <h1><span>Hi, I'm </span> Jahanvi Sharma</h1>
+            <p class="official">Web Developer</p>
+            <p class="innertext">I create intuitive and dynamic web applications, focusing</p> <p class="innertext">on user experience and innovative design.</p> <p class="innertext">Let's bring your ideas to life!</p>
+            <button type="button" onclick="scrollToSection('newsletter')">Contact Me <img src="./images/arrow (1).png" alt=""></button>
+        </div>
+        <div>
+        <div class="rightImg">
+          <img src="./images/Screenshot_2024-05-21_012326-removebg-preview.png" alt="profile">
+        </div>
+        </div>
+    </div>
+    <div class="scroll">
+        <img class="mouse" src="./images/mouse (1).png" alt="mouse">
+        <p>Scroll down</p>
+        <img class="mouse2" src="./images/arrow-down.png" alt="scroll down">
+    </div>
+  
+
+    <div class="container" id="container">
+        <div class="container2">
+            <div class="one">
+               <div class="imgone"></div>
+               <div class="imgtwo"></div>
+               <img class="imgthree" src="./images/Screenshot_2024-05-21_011923-removebg-preview-removebg-preview (1).png" alt="Images">
+            </div>
+            <div class="two" id="about">
+                <h2>Let Me Introduce Myself</h2>
+               
+                <p>I'm a dedicated Computer Science student with a passion for full stack development and data structures. Proficient in C++, HTML, CSS, JavaScript, and the MERN Stack, I've applied my skills to various projects, including web applications.</p>
+                <p>Actively participating in coding competitions and holding certifications from Udemy and Coding Ninjas, I prioritize continuous learning. Thriving in dynamic environments, I excel in problem-solving and communication. My adaptable nature and attention to detail make me an effective team player. With leadership experience gained through various initiatives, I'm well-prepared for challenging software development roles.</p>
+               
+            </div> <a href="https://www.canva.com/design/DAF4Vphfv08/OpZTrkCvmFpZLIIHCWm-gA/view?utm_content=DAF4Vphfv08&utm_campaign=designshare&utm_medium=link&utm_source=editor" target="_blank" download="Jahanvi_Sharma_Resume.pdf">Download CV <img src="./images/arrow (1).png" alt=""></a>
+              
+        </div>
+
+        <div class="main" id="skills">
+            <h2>Skills</h2>
+            <p>I Like To Craft Beautiful And Scalable Web Products</p>
+            </div>
+            
+            <div class="skillscontainer">
+                <div class="sideleft">
+                   <div class="design">
+                     <div class="box">
+                        <img src="./images/paint-brush.png" alt="design">
+                     </div>
+                     <div class="box2">
+                        <h3>Design + development</h3>
+                        <p>Clean, modern designs - optimized for performance, search engines, and converting users to customers.</p>
+                     </div>
+                   </div>
+                   <div class="design">
+                    <div class="box">
+                        <img src="./images/technology.png" alt="technology">
+                    </div>
+                    <div class="box2">
+                        <h3>Technology</h3>
+                        <p>Combined all the latest technologies to a progressive website.</p>
+                    </div>
+                   </div>
+                   <div class="design">
+                    <div class="box">
+                        <img src="./images/responsive.png" alt="responsive">
+                    </div>
+                    <div class="box2">
+                        <h3>Always Responsive</h3>
+                        <p>A responsive design makes your website accessible to all users, regardless of their device.</p>
+                    </div>
+                   </div>
+                </div>
+                <div class="sideright">
+                    <div class="boxes">
+                        <img src="./images/html.png" alt="html">
+                        <p>HTML5</p>
+                    </div>
+                    <div class="boxes">
+                        <img src="./images/css.png" alt="css">
+                        <p>CSS3</p>
+                    </div>
+                    <div class="boxes">
+                        <img src="./images/atom.png" alt="React">
+                        <p>React JS</p>
+                    </div>
+                    <div class="boxes">
+                        <img src="./images/java-script.png" alt="JavaScript">
+                        <p>JavaScript</p>
+                    </div>
+                    <div class="boxes">
+                        <img src="./images/icons8-mongodb-a-cross-platform-document-oriented-database-program-96.png" alt="mongodb">
+                        <p>MongoDB</p>
+                    </div>
+                    <div class="boxes">
+                        <img src="./images/icons8-express-js-96.png" alt="expressjs">
+                        <p>Express JS</p>
+                    </div>
+                    <div class="boxes">
+                        <img src="./images/social.png" alt="git">
+                        <p>Git</p>
+                    </div>
+                    <div class="boxes">
+                        <img src="./images/programing.png" alt="Node">
+                        <p>Node JS</p>
+                    </div>
+                    <div class="boxes">
+                        <img src="./images/database.png" alt="postgreSQL">
+                        <p>PostgreSQL</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+            
+            <div class="serviceContainer" id="services">
+                <div class="serve">
+                    <h2>The Services I Offer</h2>
+                    <p>There are various services I offer to design and develop intuitive, high-performance web applications</p>
+                    <p>that deliver exceptional user experiences.</p>
+                </div>
+                
+                <div class="services">
+                   
+                        <div class="servicebox serviceboxone">
+                            <img src="./images/mouse (2).png" alt="mouse">
+                            <h3>E-Commerce Development</h3>
+                            <p>Developing user-friendly eCommerce storefronts that ensure seamless shopping experiences, integrating efficient payment processing systems, and enhancing customer satisfaction.</p>
+                        </div>
+                   
+                        <div class="servicebox">
+                            <img src="./images/edit.png" alt="ui design">
+                            <h3>UX Design</h3>
+                            <p>Offering user experience (UX) design services to create seamless and engaging interactions with your company's products and services.</p>
+                        </div>
+                   
+                        <div class="servicebox">
+                            <img src="./images/direct-selection.png" alt="arrow">
+                            <h3>Web Development</h3>
+                            <p>Offering expert web development services, specializing in website design and development to create dynamic and responsive web applications.</p>
+                        </div>
+                  
+                        <div class="servicebox">
+                            <img src="./images/website.png" alt="website">
+                            <h3>Web Design</h3>
+                            <p>Crafting visually stunning web designs that blend layout, color schemes, typography, and imagery to create engaging and user-friendly websites.</p>
+                        </div>
+                   
+                </div>
+            </div>
+            
+             
+            </div>
+
+            <div class="projectsContainer" id="projects">
+                <div class="projectmain">
+                    <h2>Projects Done</h2>
+                    
+                    <div class="projects">
+                       <div class="card">
+                        <div class="card1">
+                        <div class="content">
+                            <h3>Visit</h3>
+                            <div class="icons">
+                                <a href="https://jahanvi025.github.io/PRODIGY_WD_02/" target="_blank"><img src="./images/arrow (1).png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="projecttext">
+                            <h3>Stop Watch</h3>
+                            <p>Create Lap using Button</p>
+                        </div>
+                       </div>
+                       <div class="card">
+                        <div class="card2">
+                        <div class="content">
+                            <h3>Visit</h3>
+                            <div class="icons">
+                                <a href="https://jahanvi025.github.io/PRODIGY_WD_01/" target="_blank"><img src="./images/arrow (1).png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="projecttext">
+                            <h3>Landing page</h3>
+                            <p>responsive product website</p>
+                        </div>
+                       </div>
+                       <div class="card">
+                        <div class="card3">
+                        <div class="content">
+                            <h3>Visit</h3>
+                            <div class="icons">
+                                <a href="https://jahanvi025.github.io/PRODIGY_WD_03/" target="_blank"><img src="./images/arrow (1).png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="projecttext">
+                            <h3>Tic Tac Toe Game</h3>
+                            <p>Interactive Game using JS</p>
+                        </div>
+                       </div>
+                       <div class="card">
+                        <div class="card4">
+                        <div class="content">
+                            <h3>Visit</h3>
+                            <div class="icons">
+                                <a href="https://jahanvi025.github.io/sorting_visualizer/" target="_blank"><img src="./images/arrow (1).png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="projecttext">
+                            <h3>Sorting Visualizer</h3>
+                            <p>Used to Sort Bars</p>
+                        </div>
+                       </div>
+                       <div class="card">
+                        <div class="card5">
+                        <div class="content">
+                            <h3>Visit</h3>
+                            <div class="icons">
+                                <a href="https://jahanvi025.github.io/tindog/" target="_blank"><img src="./images/arrow (1).png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="projecttext">
+                            <h3>TinDog Website</h3>
+                            <p>responsive Bootstrap website</p>
+                        </div>
+                       </div>
+                       <div class="card">
+                        <div class="card6">
+                        <div class="content">
+                            <h3>Visit</h3>
+                            <div class="icons">
+                                <a href="https://secrets-s5mt.onrender.com/" target="_blank"><img src="./images/arrow (1).png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="projecttext">
+                            <h3>Secret revealer</h3>
+                            <p>Using API</p>
+                        </div>
+                       </div>
+
+                    </div>
+                </div>
+            </div>
+            <div id="education" class="educationcontainer">
+                <h2>Education</h2>
+                <div class="edu">
+                <div class="education">
+                    <img src="./images/maga.jpg" alt="">
+                    <div>  <h3>Mangalayatan University</h3>
+                    <p class="edufirst">2021-2025</p>
+                    <p>Bachelor of Technology (CSE)</p></div>
+                </div>
+                <div class="education">
+                    <img src="./images/bls.png" alt="">
+                    <div><h3>BLS International School</h3>
+                    <p class="edufirst">2020-2021</p>
+                    <p>Completed 12th with 84%</p></div>
+                </div>
+                <div class="education">
+                    <img src="./images/pcs.jpg" alt="">
+                    <div>
+                    <h3>Prakash Convent Scroll</h3>
+                    <p class="edufirst">2018-2019</p>
+                    <p>Completed 10th with 92.4%</p></div>
+                </div>
+            </div>
+            </div>
+            <div class="newsLetterContainer" id="newsletter">
+                <img src="./images/envelope.png" alt="email">
+                <h1>Subscribe To Get More Updates</h1>
+                <p>Join our subscriber lists to get more updates and more wonderful informations.</p>
+                <form action="">
+                    <input name="email" id="email" type="text" placeholder="Enter your email" autocomplete="off" >
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+
+<div class="footercontainer">
+    <h2>Contact Me</h2>
+    <p>I am Jahanvi Sharma and this is my personal Website, contact me here.</p>
+    <div class="footerlinks">
+        <a class="first" href="https://www.linkedin.com/in/jahanvi025/" target="_blank"><img src="./images/linkedin (3).png" alt="linkedin"></a>
+        <a class="second" href="https://github.com/Jahanvi025" target="_blank"><img src="./images/github (4).png" alt="github"></a>
+        <a class="third" href="https://www.instagram.com/jahanvi6023?igsh=MXA2dGw5dmQ4NDd2" target="_blank"><img src="./images/instagram (3).png" alt="Instagram"></a>
+        <a class="fourth" href="https://www.naukri.com/code360/profile/Jahanvininja" target="_blank"><img src="./images/ninja.png" alt="ninja"></a>
+    </div>
+    <p class="last">© <span id="copyright"></span> <span class="name"></span>Jahanvi Sharma. All right reserved.</p>
+</div>
+<script src="./index.js"></script>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+</body>
+</html>
